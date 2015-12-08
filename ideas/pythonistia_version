@@ -1,0 +1,6 @@
+# determine the version of Pythonista
+try:
+	__import__('imp').find_module('dialogs')
+	__PISTA_VER__ = 1.6
+except ImportError:
+	__PISTA_VER__ = 1.5
