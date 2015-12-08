@@ -103,5 +103,6 @@ except Exception as err:
 	raise Exception(err.message, err.args)
 
 
-editor.open_file(name)
+# open in a new tab...
+editor.open_file(name, True, False)
 	
