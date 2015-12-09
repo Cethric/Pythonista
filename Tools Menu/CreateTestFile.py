@@ -8,7 +8,7 @@
 # or parts of could be useful
 # but i like the feedback
 
-# gist = https://gist.github.com/89535a038f5d954d5c6a
+
 # repo = https://github.com/Phuket2/Pythonista
 
 '''
@@ -87,12 +87,9 @@ if not os.path.isdir(_target_dir):
                 button1 = 'Make Dir')
 
     # Cancel button exits, so no check required.
-    try:
-        os.mkdir(_target_dir)
-    except OSError as err:
-        raise err
-
-
+    
+    # os.mkdir, will raise a OSError, so no check done
+    os.mkdir(_target_dir)
 try:
     with tempfile.NamedTemporaryFile(mode = 'w',
                                 dir = _target_dir,
