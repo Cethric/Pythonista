@@ -64,7 +64,7 @@ class MyClass(object):
         pass
 
 def main(args):
-    print 'in main...'
+    print('in main...')
     # MyClass()
     return 0
 
