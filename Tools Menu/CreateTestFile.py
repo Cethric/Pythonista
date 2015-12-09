@@ -8,7 +8,6 @@
 # or parts of could be useful
 # but i like the feedback
 
-# gist = https://gist.github.com/89535a038f5d954d5c6a
 '''
 	NOTES:
 	meant to be run from the tools menu....
