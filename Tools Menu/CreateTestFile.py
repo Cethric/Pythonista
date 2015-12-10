@@ -93,7 +93,7 @@ if __name__ == '__main__':
 # to the temp file...
 #my_std_script = ''
 
-_target_dir = '{}/{}/'.format(_base_dir, _temp_dir_name)
+_target_dir = os.path.join(_base_dir, _temp_dir_name)
 
 
 # make sure the target dir exists
