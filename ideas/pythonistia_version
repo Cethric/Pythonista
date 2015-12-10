@@ -1,6 +1,21 @@
 # determine the version of Pythonista
+
+'''
 try:
 	__import__('imp').find_module('dialogs')
 	__PISTA_VER__ = 1.6
 except ImportError:
 	__PISTA_VER__ = 1.5
+'''
+
+# the correct way, from @JonB, Pythonista 
+# coding: utf-8
+
+import plistlib
+
+
+def pyst_version_str():
+	plist=plistlib.readPlist(os.path.abspath(os.path.join(
+	sys.executable, '''../Info.plist''')))
+
+	return plist['CFBundleShortVersionString']
