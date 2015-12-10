@@ -1,0 +1,8 @@
+What info should a Pythonista AppInfo class return
+
+
+
+1. Pythonista Version
+2. Dir - home/Documents
+3. Dir - site-packages
+4. Dir - documentation folder
