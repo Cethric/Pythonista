@@ -1,17 +1,32 @@
 # coding: utf-8
 
 
-# *** DISCLAIMER PLEASE READ ***
-# please understand, i am a newbie. being a newbie,
-# my code may be crap or worse buggy
-# i still like to share. it could be useful code.
-# or parts of could be useful
-# but i like the feedback
-
-
-# repo = https://github.com/Phuket2/Pythonista
+__disclaimer__ = '''
+    *** DISCLAIMER PLEASE READ ***
+    please understand, i am a newbie. being a newbie,
+    my code may be crap or worse buggy
+    i still like to share. it could be useful code.
+    or parts of could be useful
+    but i like the feedback
+'''
 
 '''
+    While this is over kill for a small script. i want to
+    get into the habit of including this infomation.
+    Is a simple copy and paste from a template file
+'''
+__title__ = 'CreateTestFile'
+__repo__ = 'https://github.com/Phuket2/Pythonista'
+__author__ = 'Ian Joicey'
+__dependencies__ = []
+__build_date__ = (2015, 12 , 7)
+__revision_date__ = (2015, 2, 10)
+__version__  = (1,0,3)
+__pysta_versions__ = (1.5, 1.6)
+__pysta_type__ = 'Tools Menu'
+__copyright__ = None
+__licence__ = None
+___doc__ = '''
     NOTES:
     meant to be run from the tools menu....
     the idea is to create a .py file
@@ -69,37 +84,38 @@ def main(args):
     return 0
 
 if __name__ == '__main__':
-    return_code = main(sys.argv[1:])
-        if return_code oo c exit(main(sys.argv))
+	return_code = main(sys.argv[1:])
+	if return_code:
+		exit(main(sys.argv))
 '''
 
 # uncomment the line below, if you want nothing written
 # to the temp file...
-my_std_script = ''
+#my_std_script = ''
 
 _target_dir = '{}/{}/'.format(_base_dir, _temp_dir_name)
 
 
 # make sure the target dir exists
 if not os.path.isdir(_target_dir):
-    result = console.alert(title = 'Directory Does Not Exist',
-                message = 'the target_dir, does not exist!',
-                button1 = 'Make Dir')
+	result = console.alert(title = 'Directory Does Not Exist',
+	message = 'the target_dir, does not exist!',
+	button1 = 'Make Dir')
 
-    # Cancel button exits, so no check required.
-    
-    # os.mkdir, will raise a OSError, so no check done
-    os.mkdir(_target_dir)
+	# Cancel button exits, so no check required.
+
+	# os.mkdir, will raise a OSError, so no check done
+	os.mkdir(_target_dir)
 try:
-    with tempfile.NamedTemporaryFile(mode = 'w',
-                                dir = _target_dir,
-                                suffix = '.py',
-                                delete = False) as f:
-        f.write(my_std_script)
-        name = f.name
+	with tempfile.NamedTemporaryFile(mode = 'w',
+	dir = _target_dir,
+	suffix = '.py',
+	delete = False) as f:
+		f.write(my_std_script)
+		name = f.name
 
 except Exception as err:
-    raise Exception(err.message, err.args)
+	raise Exception(err.message, err.args)
 
 
 # open in a new tab...
