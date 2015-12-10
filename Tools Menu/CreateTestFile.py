@@ -26,7 +26,7 @@ __pysta_versions__ = (1.5, 1.6)
 __pysta_type__ = 'Tools Menu'
 __copyright__ = None
 __licence__ = None
-___doc__ = '''
+__doc__ = '''
     NOTES:
     meant to be run from the tools menu....
     the idea is to create a .py file
